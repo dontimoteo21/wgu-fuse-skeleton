@@ -1,7 +1,7 @@
 {
-    "name": "fuse",
+    "name": "wgu-app-pro",
     "version": "8.0.0",
-    "license": "https://themeforest.net/licenses/terms/regular",
+    "license": "none",
     "scripts": {
         "ng": "ng",
         "start": "ng serve --open",

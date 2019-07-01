@@ -24,7 +24,7 @@
         </div>
 
         <div class="" fxFlex="0 1 auto" fxLayout="row" fxLayoutAlign="start center">
-
+<!--
             <button mat-button [matMenuTriggerFor]="userMenu"
                     class="user-button">
                 <div fxLayout="row" fxLayoutAlign="center center">
@@ -51,7 +51,7 @@
                     <span>Logout</span>
                 </button>
 
-            </mat-menu>
+            </mat-menu> -->
 
             <div class="toolbar-separator"></div>
 
@@ -81,12 +81,21 @@
 
             <div class="toolbar-separator" fxHide fxShow.gt-xs></div>
 
-            <button mat-icon-button
+            <button mat-icon-button fxHide.gt-md
+            class="chat-panel-toggle-button"
+            (click)="toggleSidebarOpen('chatPanel')"
+            aria-label="Toggle chat panel">
+        <mat-icon class="secondary-text">chat</mat-icon>
+    </button>
+
+    <div class="toolbar-separator" fxHide.gt-md></div>
+
+            <!-- <button mat-icon-button
                     class="quick-panel-toggle-button"
                     (click)="toggleSidebarOpen('quickPanel')"
                     aria-label="Toggle quick panel">
                 <mat-icon class="secondary-text">format_list_bulleted</mat-icon>
-            </button>
+            </button> -->
 
             <div class="toolbar-separator" *ngIf="!hiddenNavbar && rightNavbar" fxHide fxShow.gt-xs></div>
 
